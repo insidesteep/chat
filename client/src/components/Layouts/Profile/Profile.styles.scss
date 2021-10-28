@@ -1,0 +1,203 @@
+@import "../../../scss/variables";
+
+.profile {
+  position: absolute;
+  right: -325px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  padding: 30px 0;
+  z-index: 2;
+  transition: 0.3s;
+
+  &__close {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    padding: 4.625rem 0 4.4375rem;
+    position: relative;
+
+    box-shadow: unquote($box-shadow + " rgba(142, 194, 208, 0.4)");
+    border-radius: $border-radius;
+    background-color: $primary-color;
+
+    &:hover {
+      .ScrollbarsCustom-Thumb {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: $fw-semi-bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: $accent-color;
+  }
+
+  &__avatar {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-weight: $fw-semi-bold;
+    line-height: 24px;
+    color: $accent-color;
+  }
+
+  &__about {
+    font-size: $fsz-mini;
+    line-height: 150.5%;
+    color: $text-color;
+    margin: 6px 0 12px;
+  }
+
+  &__call {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__files {
+    display: grid;
+    grid-template-columns: 82px 82px 82px;
+    grid-template-rows: 82px 82px 82px;
+    grid-gap: 17px;
+    // align-items: center;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $fw-medium;
+    font-size: $fsz-small;
+    line-height: 18px;
+    color: $accent-color;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: $accent-color;
+
+    & > span {
+      margin-right: 9px;
+      color: $accent-color
+    }
+
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: $fw-medium;
+    font-size: $fsz-small;
+    line-height: 18px;
+    color: $accent-color;
+  }
+
+  &__radio {
+    label {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid $accent-color;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + label {
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: $accent-color;
+      border: 2px solid transparent;
+      box-shadow: 0px 0px 0px 2px $accent-color;
+    }
+  }
+
+  hr {
+    border: 1px solid #d0d9df;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    width: 100%;
+    border: 1px solid $accent-color;
+    padding: 10px 13px;
+    border-radius: 8px;
+    background: transparent;
+    font-weight: $fw-medium;
+    font-size: $fsz-small;
+    line-height: 18px;
+    margin-bottom: 15px;
+    color: $accent-color;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .ScrollbarsCustom-Wrapper {
+    inset: 0 0 0 0 !important;
+  }
+
+  .ScrollbarsCustom-Track {
+    top: 1.8125rem !important;
+    right: 0.5rem !important;
+    width: 0.5rem !important;
+    background-color: transparent !important;
+  }
+
+  .ScrollbarsCustom-Thumb {
+    background: #6588de33 !important;
+    opacity: 0;
+  }
+  .ScrollbarsCustom-Content {
+    padding: 0 1.25rem !important;
+    border-radius: $border-radius $border-radius 0 0 !important;
+  }
+}

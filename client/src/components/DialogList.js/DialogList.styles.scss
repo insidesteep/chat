@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+.dialog-list + .dialog-list {
+  margin-top: 20px;
+}
+
+.dialog-list a {
+  text-decoration: none;
+}

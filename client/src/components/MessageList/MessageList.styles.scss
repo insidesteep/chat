@@ -1,0 +1,46 @@
+@import "../../scss//variables";
+
+.message-list {
+  height: 100%;
+  $self: &;
+
+  &__item {
+    display: flex;
+    margin-bottom: 3.4375rem;
+    position: relative;
+
+    &--me {
+      justify-content: flex-end;
+      #{$self}__user {
+        margin-left: 10px;
+        order: 1;
+      }
+
+      #{$self}__name {
+        text-align: right;
+      }
+    }
+  }
+
+  &__user {
+    margin-right: 10px;
+  }
+
+  &__name {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 100%;
+    font-weight: $fw-semi-bold;
+    font-size: $fsz-mini;
+    line-height: 1.125rem;
+
+    /* identical to box height */
+
+    color: #52585d;
+  }
+
+  &__message + div {
+    margin-top: 10px;
+  }
+}

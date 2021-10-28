@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+
+.menu-dots {
+  display: inline-flex;
+  flex-direction: column;
+
+  div {
+    height: 0.3125rem;
+    width: 0.3125rem;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+
+  div + div {
+      margin-top: 0.1875rem;
+  }
+}

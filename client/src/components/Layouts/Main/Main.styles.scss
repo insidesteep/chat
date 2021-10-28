@@ -1,0 +1,48 @@
+.main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: linear-gradient(107.56deg, #ffffff 0%, #f2f6f7 100%);
+  width: 100vw;
+  height: 100vh;
+  padding: 0 60px 0 calc(21.875rem + 1.75rem);
+  transition: 0.3s;
+  //   padding: 30px 60px 30px calc(350px + 28px);
+
+  &__top {
+    padding: 1.875rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__middle {
+    height: calc(100vh - 6.375rem - 4.375rem);
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      margin-right: 1.6875rem;
+    }
+
+    &-form {
+      width: 100%;
+    }
+  }
+
+  &--profile {
+    padding-right: calc(90px + 320px);
+
+    & + .profile {
+      right: 30px;
+    }
+  }
+
+  &__upload {
+    padding: 0 60px 5rem calc(21.875rem + 1.75rem);
+  }
+}

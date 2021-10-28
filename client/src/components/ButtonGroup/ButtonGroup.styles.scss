@@ -1,0 +1,83 @@
+@import "../../scss/variables";
+
+.radio-btn {
+  $self: &;
+
+  &:hover svg path {
+    fill: $accent-color;
+  }
+
+  &__group {
+    display: inline-flex;
+    background-color: #fdfdfd;
+    border: 1px solid #f8f1f1;
+    box-sizing: border-box;
+    box-shadow: unquote($box-shadow + " rgba(0, 0, 0, 0.1)");
+    border-radius: $border-radius;
+
+    &--icon {
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+
+      #{$self}:not(:last-child) {
+        margin-right: 31px;
+      }
+
+      #{$self}__wrapper {
+        position: relative;
+        padding: 0 11px 36px;
+      }
+
+      #{$self}__wrapper::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: transparent;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .active {
+        background: transparent;
+      }
+
+      .active #{$self}__wrapper::after {
+        background: $accent-color;
+      }
+
+      .active   svg path {
+        fill: $accent-color;
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: inline-block;
+    padding: 11px 50px;
+    border-radius: $border-radius;
+    font-weight: $fw-regular;
+    font-size: $fsz-small;
+    line-height: 1.125rem;
+    color: $text-color;
+    text-transform: capitalize;
+  }
+
+  &__input {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__input:checked + label {
+    background: $accent-color;
+    color: #fdfdfe;
+    font-weight: $fw-semi-bold;
+  }
+}

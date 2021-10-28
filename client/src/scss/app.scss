@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import "../../node_modules/normalize-scss/sass/normalize";
+// @import "../../node_modules/bootstrap/dist/css/bootstrap";
+@import "reset";
+@import "breakpoints";
+@import "variables";
+
+html {
+  overflow: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: $fsz-normal;
+  font-weight: $fw-regular;
+}
+
+button,
+a,
+input[type="button"],
+input[type="submit"],
+label {
+  cursor: pointer;
+}
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+}
