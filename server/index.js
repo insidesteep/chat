@@ -1,6 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const session = require("express-session");
+const MemoryStore = require("memorystore")(session);
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -15,11 +16,19 @@ connectDB();
 
 // Middlewaresvar session = require("express-session"),
 app.use(cors()); // for Heroku
+app.set("trust proxy", 1);
 app.use(
   session({
     secret: "secretcode",
-    resave: true,
+    resave: false,
     saveUninitialized: true,
+    store: new MemoryStore({
+      checkPeriod: 86400000,
+    }),
+    cookie: {
+      secure: true,
+      maxAge: 60000,
+    },
   })
 );
 app.use(cookieParser());
