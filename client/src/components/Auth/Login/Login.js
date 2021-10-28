@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./Login.styles.scss";
 import googlePlusIcon from "../../../assets/img/google-plus-icon.svg";
 
+console.log(process.env)
+
 const Login = () => {
   const handleSubmit = () => {
     window.open(`${process.env.REACT_APP_API_URL}/api/v1/auth/google`, "_self");

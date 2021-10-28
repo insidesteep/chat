@@ -5,16 +5,59 @@
   "main": "server/index.js",
   "scripts": {
     "start": "SET NODE_ENV=production&& node server/index.js",
-    "dev": "SET NODE_ENV=development && concurrently \"npm run server:dev\" \"npm run client:start\"",
+    "dev": "SET NODE_ENV=development && concurrently  \"npm run client:start\" \"npm run server:dev\"",
     "client:build": "cd client && npm run build",
     "client:start": "cd client && npm run start",
-    "server:start": "cd server && npm run start",
-    "server:dev": "cd server && npm run server",
+    "server:start": "cd server && node index.js",
+    "server:dev": "cd server && nodemon index.js",
     "heroku-postbuild": "npm run client:build"
   },
   "author": " <salaxiddinovsuxrob@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^6.3.0"
+    "concurrently": "^6.3.0",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.2",
+    "express": "^4.17.1",
+    "js-cookie": "^3.0.1",
+    "keen-slider": "^5.5.1",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "normalize-scss": "^7.0.1",
+    "react": "^17.0.2",
+    "react-custom-scroll": "^4.3.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-scrollbars-custom": "^4.0.27",
+    "redux-persist": "^6.0.0",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.1.2", "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10",
+    "multer": "^1.4.3",
+    "passport": "^0.5.0",
+    "passport-google-oauth": "^2.0.0",
+    "socket-io": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "sass": "^1.43.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   }
 }
